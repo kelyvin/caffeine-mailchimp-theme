@@ -6,49 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <style type="text/css">
     * {
-        margin: 0;
-        padding: 0;
         font-size: 100%;
         font-family: 'Avenir Next', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-        line-height: 1.65;
-    }
-
-    body,
-    .body-wrap {
-        width: 100% !important;
-        height: 100%;
-        background: #efefef;
-        -webkit-font-smoothing: antialiased;
-        -webkit-text-size-adjust: none;
-    }
-
-    .title {
-        margin-bottom: 0;
-    }
-
-    a {
-        color: #56817A;
-        text-decoration: none;
-    }
-
-    .button {
-        display: inline-block;
-        color: white;
-        background: #56817A;
-        border: solid #56817A;
-        border-width: 10px 20px 8px;
-        font-weight: bold;
-        border-radius: 4px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-bottom: 20px;
-        line-height: 1.25;
     }
 
     h1 {
@@ -76,86 +35,32 @@
     ol {
         font-size: 16px;
         font-weight: normal;
-        margin-bottom: 20px;
     }
 
-    .container {
-        display: block !important;
-        clear: both !important;
-        margin: 0 auto !important;
-        max-width: 580px !important;
-    }
-
-    .container table {
-        width: 100% !important;
-        border-collapse: collapse;
-    }
-
-    .container .header {
-        padding: 80px 0;
-    }
-
-    .container .header h1 {
-        margin: 0 auto !important;
-        max-width: 90%;
-        color: #F6F4E9;
-        text-align: center;
-        text-shadow: 2px 2px 2px #222F38, 2px 2px 2px #222F38;
-        font-weight: normal;
-        font-weight: 500;
-    }
-
-    .container .content {
-        background: white;
-        padding: 30px 35px;
-    }
-
-    .container .footer {
-        background: none;
-    }
-
-    .container .footer p {
-        margin-bottom: 0;
-        color: #888;
-        text-align: center;
-        font-size: 14px;
-    }
-
-    .container .footer a {
-        color: #888;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .view-email-link a {
-        color: #0782C1;
-        text-decoration: underline;
-        font-size: 12px;
-    }
     </style>
 </head>
 
-<body>
-    <table class="body-wrap">
+<body style="width: 100% !important; height: 100%; background: #efefef; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none;">
+    <table class="body-wrap" style="width: 100% !important; height: 100%; background: #efefef; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none;">
         <tr>
-            <td class="container">
-                <table>
+            <td class="container" style="display:block; clear:both; margin:0 auto; max-width:580px;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
                         <td class="view-email-link" align="right">
-                            <a href="*|ARCHIVE|*">View in browser</a>
+                            <a href="*|ARCHIVE|*" style="color: #0782C1; font-size: 12px;">View in browser</a>
                         </td>
                     </tr>
                 </table>
                 <table cellpadding="0" cellspacing="0" border="0" height="200" width="100%">
                     <tr>
-                        <td background="http://i.imgur.com/vWRjEvu.jpg" bgcolor="#56817A" valign="top" class="header">
-                        <!--[if gte mso 9]>
+                        <td background="http://i.imgur.com/vWRjEvu.jpg" bgcolor="#56817A" valign="center" class="header">
+                            <!--[if gte mso 9]>
                             <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:200px;">
                             <v:fill type="tile" src="*|RSSITEM:IMAGE|*" color="#56817A" />
                             <v:textbox inset="0,0,0,0">
                         <![endif]-->
                             <div>
-                                <h1>*|RSSFEED:TITLE|*</h1>
+                                <h1 style="margin:0 auto; width: 75%; background-color:rgba(0, 0, 0, 0.5); color: #F6F4E9; text-align: center; text-shadow: 2px 2px 2px #222F38, 2px 2px 2px #222F38; font-weight: normal; font-weight: 500;">*|RSSFEED:TITLE|*</h1>
                             </div>
                             <!--[if gte mso 9]>
                           </v:textbox>
@@ -164,20 +69,24 @@
                         </td>
                     </tr>
                 </table>
-                <table>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content">
-                            <h2>Hello *|IF:FNAME|* *|FNAME|* *|ELSE:|* Friend *|END:IF|*! </h2>
+                        <td class="content" style="background: white; padding: 10px 35px;">
+                            <h2 style="margin-bottom: 10px;">Hello *|IF:FNAME|* *|FNAME|**|ELSE:|* Friend*|END:IF|*! </h2>
                             <p>Here's your weekly update on all the posts you may have missed from *|RSSFEED:TITLE|*!</p>
-                            <br/> *|RSSITEMS:|*
-                            <a href="*|RSSITEM:URL|*" target="_blank"><h2 class="title">*|RSSITEM:TITLE|*</h2></a>
-                            <h5>*|RSSITEM:DATE|* | *|RSSITEM:AUTHOR|*</h5>
+                            *|RSSITEMS:|*
+                            <a href="*|RSSITEM:URL|*" target="_blank" style="color:#56817A; text-decoration: none;">
+                                <h2 class="title" style="margin-bottom:0; line-height:normal;">*|RSSITEM:TITLE|*</h2>
+                            </a>
+                            <h5 style="margin: 0 0 10px;">*|RSSITEM:DATE|* | *|RSSITEM:AUTHOR|*</h5>
                             <p>*|RSSITEM:CONTENT|*</p>
-                            <table>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td align="center">
                                         <p>
-                                            <a href="*|RSSITEM:URL|*" target="_blank" class="button">Read More</a>
+                                            <a href="*|RSSITEM:URL|*" target="_blank" class="button" style="display: inline-block; color: white; background: #56817A; border: solid #56817A; border-width: 10px 20px 8px; font-weight: bold; border-radius: 4px; text-decoration: none;">
+                                                Read More
+                                            </a>
                                         </p>
                                     </td>
                                 </tr>
@@ -186,11 +95,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="content">
-                            <h5>
+                        <td class="content" style="background: white; padding: 30px 35px;">
+                            <h5 style="margin: 0;">
                                 Check out some older posts:
-                              </h5>
-                            <p>
+                            </h5>
+                            <p style="line-height: 1.5;">
                                 *|RSS:RECENT|*
                             </p>
                         </td>
@@ -199,24 +108,25 @@
             </td>
         </tr>
         <tr>
-            <td class="container">
+            <td class="container" style="display:block; clear:both; margin:0 auto; max-width:580px;">
                 <!-- Message start -->
-                <table>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content footer" align="center">
-                            <p> Copyright © *|CURRENT_YEAR|* <a href="#">*|LIST:COMPANY|*</a>, All rights reserved.</p>
-                            <p><a href="mailto:">*|LIST:EMAIL|*</a> | <a href="*|UNSUB|*">Unsubscribe</a> *|EMAIL|*</p>
+                        <td class="footer" align="center" style="padding: 20px 0;">
+                            <p style="margin: 0; color: #888; text-align: center; font-size: 14px;"> Copyright © *|CURRENT_YEAR|* <a href="#">*|LIST:COMPANY|*</a>, All rights reserved.</p>
+                            <p style="margin: 0; color: #888; text-align: center; font-size: 14px;">
+                                <a href="mailto:" style="color: #888; text-decoration: none; font-weight: bold;">*|LIST:EMAIL|*</a> | <a href="*|UNSUB|*" style="color: #888; text-decoration: none; font-weight: bold;">Unsubscribe</a> *|EMAIL|*</p>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
         <tr>
-            <td class="container">
-                <table>
+            <td class="container" style="display:block; clear:both; margin:0 auto; max-width:580px;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
                         <td class="footer" align="center">
-                            <p>*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|**|END:IF|*</p>
+                            <p style="margin: 0; color: #888; text-align: center; font-size: 14px;">*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|**|END:IF|*</p>
                             <br/> *|REWARDS|*
                         </td>
                     </tr>
@@ -225,4 +135,5 @@
         </tr>
     </table>
 </body>
+
 </html>
